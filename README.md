@@ -17,7 +17,7 @@ Terraform script in the [ccc-azure-app](https://github.com/Learning-Happy-Hour/c
 
 + (optional) authenticate to AzureRM, switch to the Subscription of your choice if necessary
 
-- initialize the Terraform module:
+- Initialize the Terraform module:
 
     ```
     cd cafecoffeeco-vmseries-azure-testing/ccc-azure-app
@@ -25,17 +25,17 @@ Terraform script in the [ccc-azure-app](https://github.com/Learning-Happy-Hour/c
     ```
     terraform init
     ```
-- (optional) plan you infrastructure to see what will be actually deployed:
+- (Optional) plan you infrastructure to see what will be actually deployed:
     
      ```
     terraform plan
     ```    
-- deploy the infrastructure (you will have to confirm it with typing in yes):
+- Deploy the infrastructure (you will have to confirm it with typing in yes):
 
     ```
     terraform apply
     ```
-- the deployment takes a few minutes. the output should be similar to the below screenshot: 
+- The deployment takes a few minutes. the output should be similar to the below screenshot: 
 
 
         screenshot
@@ -52,7 +52,9 @@ The Terraform script in [ccc-panorama](https://github.com/Learning-Happy-Hour/ca
 + (optional) authenticate to AzureRM, switch to the Subscription of your choice if necessary
 
 - Initialize the Terraform module:
-
+    ```
+    cd ~/cafecoffeeco-vmseries-azure-testing/ccc-panorama
+    ```
     ```
     terraform init
     ```
@@ -101,6 +103,9 @@ The Terraform script in [ccc-common-vmseries](https://github.com/Learning-Happy-
 
 - Setup bootstrapping options in  **terraform.tfvars** file. copy **auth-key** value from bootstrap parameters under the plugin license manager and paste it in **bootstrap_options** auth-key value for both fw-1 and fw-2:  
 
+    ```
+    cd ~/cafecoffeeco-vmseries-azure-testing/ccc-common-vmseries
+    ```
     ```
     nano terraform.tfvars
     ```
