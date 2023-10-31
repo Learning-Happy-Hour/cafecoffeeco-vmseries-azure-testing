@@ -11,7 +11,7 @@ I have used terraform to build CafeCoffeeCo's testing website, Panorama server a
     ```
 ## 1. CafeCoffeeCo Application Setup
 
-Terraform script in the [ccc-azure-app](https://github.com/Learning-Happy-Hour/cafecoffeeco-vmseries-azure-testing/tree/main/ccc-testing-vmseries-terraform-azure/ccc-azure-app) folder deploys an Apache2 webserver on Ubuntu 22.04 LTS with the IP address of 10.112.1.4. The NSG assinged to the subnet allows access from any source IP address to tcp port 22 and 80.
+Terraform script in the [ccc-azure-app](https://github.com/Learning-Happy-Hour/cafecoffeeco-vmseries-azure-testing/tree/main/ccc-azure-app) folder deploys an Apache2 webserver on Ubuntu 22.04 LTS with the IP address of 10.112.1.4. The NSG assinged to the subnet allows access from any source IP address to tcp port 22 and 80.
 
 ### Deployment steps:
 
@@ -45,7 +45,7 @@ Terraform script in the [ccc-azure-app](https://github.com/Learning-Happy-Hour/c
 
 ## 2. CafeCoffeeCo Panorama (Management) Setup 
 
-The Terraform script in [ccc-panorama](https://github.com/Learning-Happy-Hour/cafecoffeeco-vmseries-azure-testing/tree/main/ccc-testing-vmseries-terraform-azure/ccc-panorama) folder deploys a Panorama server (version 10.2.3) with one NIC. the NIC will have a private IP address of 10.255.0.4 and a dynamic public IP address. Once panorama web inteface is reachable, login to the server to import and load the baseline configuration. follow the below deployment steps for more info.
+The Terraform script in [ccc-panorama](https://github.com/Learning-Happy-Hour/cafecoffeeco-vmseries-azure-testing/tree/main/ccc-panorama) folder deploys a Panorama server (version 10.2.3) with one NIC. the NIC will have a private IP address of 10.255.0.4 and a dynamic public IP address. Once panorama web inteface is reachable, login to the server to import and load the baseline configuration. follow the below deployment steps for more info.
 
 ### Deployment steps
 
@@ -85,7 +85,7 @@ The Terraform script in [ccc-panorama](https://github.com/Learning-Happy-Hour/ca
     ```
     terraform output password
     ```
-- Login to panorama and load the baselie config ([basline-config.xml](https://github.com/Learning-Happy-Hour/cafecoffeeco-vmseries-azure-testing/blob/main/ccc-testing-vmseries-terraform-azure/ccc-panorama/baseline-config.xml)).
+- Login to panorama and load the baselie config ([basline-config.xml](https://github.com/Learning-Happy-Hour/cafecoffeeco-vmseries-azure-testing/blob/main/ccc-panorama/baseline-config.xml)).
 - Before commiting the configuation, make sure you define a new Panorama administrator so you don't lock yourself out!
 - License the Panorama.
 - Install the Software Licensing Plugin. 
@@ -96,7 +96,7 @@ The Terraform script in [ccc-panorama](https://github.com/Learning-Happy-Hour/ca
 
 ## 3. CafeCoffeeCo Common VM-series Firewall Setup
 
-The Terraform script in [ccc-common-vmseries](https://github.com/Learning-Happy-Hour/cafecoffeeco-vmseries-azure-testing/tree/main/ccc-testing-vmseries-terraform-azure/ccc-common-vmseries) folder deploys two vm-series firewall with four vCPUs and three interface, a public loadbalancer and a private loadbalancer. It configures vnet peering between transit vnet and the other two vnets. To ensure that the web server has inbound and outbound internet access follow the below steps.
+The Terraform script in [ccc-common-vmseries](https://github.com/Learning-Happy-Hour/cafecoffeeco-vmseries-azure-testing/tree/main/ccc-common-vmseries) folder deploys two vm-series firewall with four vCPUs and three interface, a public loadbalancer and a private loadbalancer. It configures vnet peering between transit vnet and the other two vnets. To ensure that the web server has inbound and outbound internet access follow the below steps.
 
 
 ### Deployment steps
