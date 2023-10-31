@@ -7,7 +7,7 @@ I have used terraform to build CafeCoffeeCo's testing website, Panorama server a
 - Download the scripts using:
 
     ```
-    git clone https://github.com/Learning-Happy-Hour/cafecoffeeco-vmseries-testing-azure.git
+    git clone https://github.com/Learning-Happy-Hour/cafecoffeeco-vmseries-azure-testing.git
     ```
 ## 1. CafeCoffeeCo Application Setup
 
