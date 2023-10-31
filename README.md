@@ -64,7 +64,7 @@ The Terraform script in [ccc-panorama](/ccc-panorama/) folder deploys a Panorama
     terraform apply
     ```
 - The deployment takes around 10 minutes. the output should be similar to the below screenshot: 
-![terraform output](/ccc-azure-app/ccc-panorama-screenshot.jpg)
+![terraform output](/ccc-panorama/ccc-panorama-screenshot.jpg)
 
 
 - Wait for a few minutes for Panorama to boot up.
@@ -132,7 +132,7 @@ The Terraform script in [ccc-common-vmseries](/ccc-common-vmseries/) folder depl
 
 - While the resources are being deployed, define a route table in ccc-app-rg resource group. Create a UDR for desitnation 0.0.0.0/0 with the next hop of 10.112.0.21 (private LB's fronetEnd IP address). Associate the route with app-subnet01.
 - the effective route on app-nic should look like:
-![terraform output](/ccc-azure-app/ccc-vmseries-screenshot.jpg)
+![terraform output](/ccc-common-vmseries/ccc-vmseries-screenshot.jpg)
 
 - get the frotend IP address of Public LB:
     ```
