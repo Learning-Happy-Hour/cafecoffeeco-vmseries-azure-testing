@@ -4,9 +4,9 @@ I have used terraform to build CafeCoffeeCo's testing website, Panorama server a
 
 **Notes:** 
 
-**1. This guide is written for bash shell**
+1. This guide is written for bash shell
 
-**2. The Azure location is set to "Australia East". Set the location to your preffered location by changing the "location" variable value in __terraform.tfvars__ file.**
+2. The Azure location is set to "Australia East". Set the location to your preffered location by changing the "location" variable value in __terraform.tfvars__ file.
 
 ## 1. CafeCoffeeCo Application Setup
 
@@ -82,13 +82,14 @@ The Terraform script in [ccc-panorama](/ccc-panorama/) folder deploys a Panorama
     ```
     terraform output password
     ```
-- Login to panorama, eport and load the baseline config ([basline-config.xml](/ccc-panorama/baseline-config.xml)).
+- Login to Panorama and enter the serial number provisioned as part of Software NGFW Deployment profile.
+- Login to panorama and retrieve the licenses. 
+- Import and load the baseline config ([basline-config.xml](/ccc-panorama/baseline-config.xml)).
 - Before commiting the configuation, make sure to define a new Panorama administrator so you don't lock yourself out!
-- License the Panorama.
-- Install the Software Licensing Plugin. 
+- Download and Install the Software Licensing Plugin. 
 - Under the plugin, add a bootstrap definition and a license manager.
-- Commit the config
-- take a note of bootstrap parameter under the license manager
+- Commit to panorama
+- take a note of bootstrap parameters (especially auth-key) under the license manager
 
 
 ## 3. CafeCoffeeCo Common VM-series Firewall Setup
