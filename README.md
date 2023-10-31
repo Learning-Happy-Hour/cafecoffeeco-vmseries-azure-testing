@@ -2,20 +2,23 @@
 
 I have used terraform to build CafeCoffeeCo's testing website, Panorama server and VM-Series firewalls. Each terraform script deploys a resource group with multipe resources including VNET, VMs, NICs, NSGs and more. There will be total of three resource groups (App, Management and Transit).
 
-**Note: This guide is written for bash shell**
+**Notes:** 
 
-- Download the scripts using:
+**1. This guide is written for bash shell**
 
-    ```
-    git clone https://github.com/Learning-Happy-Hour/cafecoffeeco-vmseries-azure-testing
-    ```
+**2. The Azure location is set to "Australia East". Set the location to your preffered location by changing the "location" variable value in __terraform.tfvars__ file.**
+
 ## 1. CafeCoffeeCo Application Setup
 
 Terraform script in the [ccc-azure-app](/ccc-azure-app/) folder deploys an Apache2 webserver on Ubuntu 22.04 LTS with the IP address of 10.112.1.4. The NSG assinged to the subnet allows access from any source IP address to tcp port 22 and 80.
 
 ### Deployment steps:
 
-+ (optional) authenticate to AzureRM, switch to the Subscription of your choice if necessary
+- Download the scripts:
+
+    ```
+    git clone https://github.com/Learning-Happy-Hour/cafecoffeeco-vmseries-azure-testing
+- (Optional) authenticate to AzureRM, switch to the Subscription of your choice if necessary
 
 - Initialize the Terraform module:
 
