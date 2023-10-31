@@ -82,7 +82,7 @@ The Terraform script in [ccc-panorama](/ccc-panorama/) folder deploys a Panorama
     ```
     terraform output password
     ```
-- Login to Panorama and enter the serial number provisioned as part of Software NGFW Deployment profile.
+- Login to Panorama and enter the provisioned serial number as part of Software NGFW Deployment profile.
 - Login to panorama and retrieve the licenses. 
 - Import and load the baseline config ([basline-config.xml](/ccc-panorama/baseline-config.xml)).
 - Before commiting the configuation, make sure to define a new Panorama administrator so you don't lock yourself out!
@@ -99,22 +99,20 @@ The Terraform script in [ccc-common-vmseries](/ccc-common-vmseries/) folder depl
 
 ### Deployment steps
 
-- Setup bootstrapping options in  **terraform.tfvars** file. copy **auth-key** value from bootstrap parameters under the plugin license manager and paste it in **bootstrap_options** auth-key value for both fw-1 and fw-2:  
-
+- Setup bootstrapping options in  **terraform.tfvars** file. 
     ```
     cd ~/cafecoffeeco-vmseries-azure-testing/ccc-common-vmseries
     ```
     ```
     nano terraform.tfvars
     ```
+- In Panorama, copy the **auth-key** value from bootstrap parameters under the plugin license manager ACTION column. In **terraform.tfvars**, paste the value in **bootstrap_options** auth-key value for both fw-1 and fw-2:  
+
     the result should look like:
 
     
     > bootstrap_options = "type=dhcp-client;panorama-server=10.255.0.4;__**auth-key=\<auth-key-value\>**__;dgname=Azure Transit_DG;tplname=Azure Transit_TS;plugin-op-commands=panorama-licensing-mode-on;dhcp-accept-server-hostname=yes;dhcp-accept-server-domain=yes"
     
-
-- (optional) authenticate to AzureRM, switch to the Subscription of your choice if necessary
-
 - Initialize the Terraform module:
 
     ```
@@ -132,11 +130,11 @@ The Terraform script in [ccc-common-vmseries](/ccc-common-vmseries/) folder depl
     ```
 - It will take up to 15 minutes to successfully build the resources. Once finished the result should look like:
 
-        Screenshot
+![terraform output](/ccc-common-vmseries/ccc-vmseries-screenshot.jpg)
+
 
 - While the resources are being deployed, define a route table in ccc-app-rg resource group. Create a UDR for desitnation 0.0.0.0/0 with the next hop of 10.112.0.21 (private LB's fronetEnd IP address). Associate the route with app-subnet01.
 - the effective route on app-nic should look like:
-![terraform output](/ccc-common-vmseries/ccc-vmseries-screenshot.jpg)
 
 - get the frotend IP address of Public LB:
     ```
