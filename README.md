@@ -71,7 +71,7 @@ The Terraform script in [ccc-panorama](https://github.com/Learning-Happy-Hour/ca
 - The deployment takes around 10 minutes. the output should be similar to the below screenshot: 
 
 
-        ![terraform output] (/ccc-azure-app/ccc-app-screenshot.jpg)
+        ![terraform output](https://github.com/Learning-Happy-Hour/cafecoffeeco-vmseries-azure-testing/blob/main/ccc-azure-app/ccc-app-screenshot.jpg)
 
 - Wait for a few minutes for Panorama to boot up.
 - Use the public IP address in output summary to connect to panorama:
