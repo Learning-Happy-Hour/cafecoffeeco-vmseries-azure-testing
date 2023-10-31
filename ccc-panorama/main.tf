@@ -34,7 +34,7 @@ locals {
 
 # Manage the network required for the topology.
 module "vnet" {
-  source = "../../modules/vnet"
+  source = "../modules/vnet"
 
   for_each = var.vnets
 
@@ -56,7 +56,7 @@ module "vnet" {
 }
 
 module "panorama" {
-  source = "../../modules/panorama"
+  source = "../modules/panorama"
 
   for_each = var.panoramas
 
