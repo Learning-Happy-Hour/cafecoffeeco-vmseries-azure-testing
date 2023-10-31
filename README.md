@@ -36,12 +36,7 @@ Terraform script in the [ccc-azure-app](https://github.com/Learning-Happy-Hour/c
     terraform apply
     ```
 - The deployment takes a few minutes. the output should be similar to the below screenshot: 
-
-
-        screenshot
-
-
-
+  ![terraform output](/ccc-azure-app/ccc-app-screenshot.jpg)
 
 ## 2. CafeCoffeeCo Panorama (Management) Setup 
 
@@ -69,9 +64,8 @@ The Terraform script in [ccc-panorama](https://github.com/Learning-Happy-Hour/ca
     terraform apply
     ```
 - The deployment takes around 10 minutes. the output should be similar to the below screenshot: 
+![terraform output](/ccc-azure-app/ccc-panorama-screenshot.jpg)
 
-
-        ![terraform output](https://github.com/Learning-Happy-Hour/cafecoffeeco-vmseries-azure-testing/blob/main/ccc-azure-app/ccc-app-screenshot.jpg)
 
 - Wait for a few minutes for Panorama to boot up.
 - Use the public IP address in output summary to connect to panorama:
@@ -138,8 +132,7 @@ The Terraform script in [ccc-common-vmseries](https://github.com/Learning-Happy-
 
 - While the resources are being deployed, define a route table in ccc-app-rg resource group. Create a UDR for desitnation 0.0.0.0/0 with the next hop of 10.112.0.21 (private LB's fronetEnd IP address). Associate the route with app-subnet01.
 - the effective route on app-nic should look like:
-
-            screenshot
+![terraform output](/ccc-azure-app/ccc-vmseries-screenshot.jpg)
 
 - get the frotend IP address of Public LB:
     ```
