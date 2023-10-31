@@ -1,6 +1,6 @@
 # Securing CafeCoffeeCo's Azure testing infrastructure with VM-Series firewalls
 
-I have used terraform to build CafeCoffeeCo's testing website, Panorama server and VM-Series firewalls. Each terraform script deploys a resource group with multipe resources. There will be total of three VNETs (App, Management and Transit). 
+I have used terraform to build CafeCoffeeCo's testing website, Panorama server and VM-Series firewalls. Each terraform script deploys a resource group with multipe resources including VNET, VMs, NICs, NSGs and more. There will be total of three resource groups (App, Management and Transit).
 
 **Note: This guide is written for bash shell**
 
@@ -19,6 +19,9 @@ Terraform script in the [ccc-azure-app](https://github.com/Learning-Happy-Hour/c
 
 - initialize the Terraform module:
 
+    ```
+    cd cafecoffeeco-vmseries-azure-testing/ccc-azure-app
+    ```
     ```
     terraform init
     ```
