@@ -79,8 +79,8 @@ The Terraform script in [ccc-panorama](/ccc-panorama/) folder deploys a Panorama
     ```
     terraform output password
     ```
-- Login to panorama and load the baselie config ([basline-config.xml](/ccc-panorama/baseline-config.xml)).
-- Before commiting the configuation, make sure you define a new Panorama administrator so you don't lock yourself out!
+- Login to panorama, eport and load the baseline config ([basline-config.xml](/ccc-panorama/baseline-config.xml)).
+- Before commiting the configuation, make sure to define a new Panorama administrator so you don't lock yourself out!
 - License the Panorama.
 - Install the Software Licensing Plugin. 
 - Under the plugin, add a bootstrap definition and a license manager.
