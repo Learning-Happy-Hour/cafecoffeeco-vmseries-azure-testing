@@ -153,7 +153,7 @@ The Terraform script in [ccc-common-vmseries](/ccc-common-vmseries/) folder depl
     terraform output lb_frontend_ips
     ```
 - Go to panorama and set the IP address of the **public-lb-ip-address** address object to public LB's frontend IP address.
-    ![address object](/ccc-common-vmseries/address%20object.jpg)
+    ![address object](/images/address-object.jpg)
 
 - commit and push the configuration.
 - CafeCoffeeCo's website (http://\<public-lb-frontend\>) should be accessible after a successful firewall commit.
