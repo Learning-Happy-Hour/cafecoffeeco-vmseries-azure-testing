@@ -40,7 +40,7 @@ Terraform script in the [ccc-azure-app](/ccc-azure-app/) folder deploys an Apach
     ```
 - The deployment takes a few minutes. The output should be similar to the screenshot below:
 
-  ![terraform output](/ccc-azure-app/ccc-app-screenshot.jpg)
+  ![terraform output](/images/app-output.jpg)
 
 ## 2. CafeCoffeeCo Panorama (Management) Setup 
 
@@ -69,7 +69,7 @@ The Terraform script in [ccc-panorama](/ccc-panorama/) folder deploys a Panorama
     ```
 - The deployment takes around 10 minutes. The output should be similar to the screenshot below:
 
-    ![terraform output](/ccc-panorama/ccc-panorama-screenshot.jpg)
+    ![terraform output](/images/panorama-output.jpg)
 
 
 - Wait for a few minutes for Panorama to boot up.
@@ -136,17 +136,17 @@ The Terraform script in [ccc-common-vmseries](/ccc-common-vmseries/) folder depl
     ```
 - It will take up to 15 minutes to successfully build the resources. Once finished, the result should look like this:
 
-    ![terraform output](/ccc-common-vmseries/ccc-vmseries-screenshot.jpg)
+    ![terraform output](/images/vmseries-output.jpg)
 
 
 - While the resources are being deployed, define a route table in ccc-app-rg resource group. Create a UDR for destination  0.0.0.0/0 with the next hop of 10.110.0.21 (private LB's frontend IP address). Associate the route with app-subnet01.
 
-    ![default route for the app](/ccc-common-vmseries/default-route-definition.jpg)
+    ![default route for the app](/images/default-route-definition.jpg)
 
-    ![route table association with the subnet](/ccc-common-vmseries/route-association.jpg)
+    ![route table association with the subnet](/images/route-association.jpg)
 
 - the effective route on app-nic should look like:
-    ![effective routes on app-nic](/ccc-common-vmseries/effective%20routes.jpg)
+    ![effective routes on app-nic](/images/effective-routes.jpg)
 
 - Get the frontend IP address of Public LB:
     ```
