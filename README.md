@@ -162,9 +162,9 @@ The Terraform script in [ccc-common-vmseries](/ccc-common-vmseries/) folder depl
 
 - [Terraform for Software NGFW](https://pan.dev/swfw/) 
 - [Palo Alto Networks  Reference Architecture Guides](https://www.paloaltonetworks.com/resources/reference-architectures)
-- [Terraform VM-Series Modules in Github](https://github.com/PaloAltoNetworks/terraform-azurerm-vmseries-modules)
+- [Terraform Azure VM-Series Modules in Github](https://github.com/PaloAltoNetworks/terraform-azurerm-vmseries-modules)
 - [Palo Alto Networks as Code with Terraform](https://pan.dev/terraform/)
-- [VM-Series Tech Docs](https://docs.paloaltonetworks.com/vm-series)
+- [VM-Series TECHDOCS](https://docs.paloaltonetworks.com/vm-series)
 - [Software NGFW Credit Estimator](https://www.paloaltonetworks.com/resources/tools/ngfw-credits-estimator)
 
 
