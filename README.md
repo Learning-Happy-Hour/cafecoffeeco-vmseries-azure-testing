@@ -152,6 +152,15 @@ The Terraform script in [ccc-common-vmseries](/ccc-common-vmseries/) folder depl
     ```
     terraform output lb_frontend_ips
     ```
+- Bootstrapping will take some time. Once firewalls are successfully bootstrapped, first, they will receive the license and Dynamic Updates from Panorama. Then Panorama will send the config to the firewalls, and a config commit will happen on the firewalls. Check the Task Manager for the status of the tasks.
+
+    ![task manager](/images/task%20manager.jpg)
+
+- Managed Devices Summary:
+    ![summary](/images/Managed%20Devices%20Summary.jpg)
+- SW Firewall License Plugin License Manager:
+    ![managed devices](/images/License%20Manager%20Managed%20Devices.jpg)
+
 - Go to panorama and set the IP address of the **public-lb-ip-address** address object to public LB's frontend IP address.
     ![address object](/images/address-object.jpg)
 
