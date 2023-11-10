@@ -43,7 +43,7 @@ vnets = {
   }
 }
 
-
+# --- PANORAMA PART --- #
 panorama_version = "10.2.3"
 
 panoramas = {
