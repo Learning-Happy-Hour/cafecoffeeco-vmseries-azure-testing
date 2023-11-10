@@ -180,7 +180,7 @@ module "vmseries" {
   ]
 }
 
-## -- VNET peering and routing -- ##
+# VNET peering and routing 
  
 module "peering" {
   source = "../modules/vnet_peering"
