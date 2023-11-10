@@ -55,6 +55,7 @@ module "vnet" {
   tags = var.tags
 }
 
+# Provision Panorama
 module "panorama" {
   source = "../modules/panorama"
 
