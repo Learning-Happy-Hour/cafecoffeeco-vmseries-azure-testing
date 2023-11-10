@@ -225,7 +225,7 @@ vmseries = {
  }
 }
 
-#vnet peering 
+# --- vnet peering  --- ##
 peer_vnets = {
   "management" = {
     "vnet_name" = "ccc-management-vnet"
