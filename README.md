@@ -4,10 +4,9 @@ I have used Terraform to build CafeCoffeeCo's testing website, Panorama server a
 
 **Notes:** 
 
-1. This guide is written for bash shell
-
-2. The Azure location is set to "Australia East". Set the location to your preferred location by changing the "location" variable value in __terraform.tfvars__ file.
-
+1. The Azure location is set to "Australia East". Set the location to your preferred location by changing the "location" variable value in __terraform.tfvars__ file.
+2. I used Bash shell for this guide.
+   
 ## 1. CafeCoffeeCo Application Setup
 
 Terraform script in the [ccc-azure-app](/ccc-azure-app/) folder deploys an Apache2 webserver on Ubuntu 22.04 LTS with the IP address of 10.112.1.4. The NSG assigned to the subnet allows access from any source IP address to TCP port 22 and 80.
