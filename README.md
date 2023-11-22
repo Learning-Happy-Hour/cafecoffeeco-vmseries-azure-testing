@@ -1,6 +1,6 @@
 # Securing CafeCoffeeCo's Azure testing infrastructure with VM-Series firewalls
 
-![design diagram](/images/design diagram.jpg)
+  ![daigram](/images/design diagram.jpg)
 
 I have used Terraform to build CafeCoffeeCo's testing website, Panorama server and VM-Series firewalls. Each terraform script deploys a resource group with multiple resources, including VNET, VMs, NICs, NSGs and more. There will be three resource groups (App, Management and Transit).
 
